@@ -1,3 +1,2 @@
 import 'regenerator-runtime';
-
-console.log('Hello Coders!');
+import '../styles/main.css';
