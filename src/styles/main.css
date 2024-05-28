@@ -350,16 +350,23 @@ section h2 span {
 }
 
 footer {
-  background-color: #00aced;
   color: white;
   padding: 40px 0;
+  padding-top: 0;
   padding-bottom: 0;
 }
 
 .footer-social,
 .footer-developer {
   text-align: center;
-  margin-bottom: 30px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.footer-social{
+  background-color: #00aced;
 }
 
 .footer-social h3,
@@ -369,7 +376,7 @@ footer {
 }
 
 .footer-developer{
-  background-color: #ff8c00;
+  background-color: rgba(255, 166, 0, 0.7);
   margin-bottom: 0;
   padding-top: 40px;
   padding-bottom: 40px;
