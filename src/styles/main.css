@@ -39,19 +39,38 @@ header {
 }
 
 .pa-3{
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 150px;
+  padding-right: 150px;
 }
 
 .bg{
   background-color: rgba(0, 0, 0, 0.2);
 }
 
+.navbar-search-bar{
+  flex-basis: auto;
+  flex-grow: 8;
+  flex-shrink: 1;
+}
+
+.nav-search{
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 90%;
+  padding: 8px;
+  border-radius: 5px;
+  border: 0px;
+  color: rgba(255, 255, 255, .7);
+}
+
 nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   padding: 5px 0;
+}
+
+.logo{
+  flex: auto;
 }
 
 nav ul {
@@ -100,12 +119,14 @@ nav ul li a {
 }
 
 .btn-orange {
-  background-color: orange;
+  background-color: rgba(255, 166, 0, 0.8);
+  border-radius: 8px;
   color: white;
 }
 
 .btn-blue {
-  background-color: #00aced;
+  background-color: rgba(9, 179, 228, 0.8);
+  border-radius: 8px;
   color: white;
 }
 
