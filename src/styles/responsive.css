@@ -6,6 +6,8 @@
   .search-bar{
     flex-direction: column;
     gap: 10px;
+    width: 80%;
+    bottom: -120px;
   }
   .search-bar button{
     width: 98%;
@@ -17,6 +19,11 @@
   }
   .nav-bar ul{
     flex-direction: column;
+    /* menyembunyikan tampilan menu pada layar dengan lebar kecil */
+    display: none; 
+  }
+  .promo-menarik{
+    padding-top: 120px;
   }
   .promo-menarik .card{
     width: 100%;
@@ -39,5 +46,8 @@
   .developer-profiles{
     flex-direction: column;
     display: inline-flex;
+  }
+  .menu{
+    display: none;
   }
 }
