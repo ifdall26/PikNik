@@ -18,12 +18,12 @@ header {
 }
 
 .overlay {
+  display: flex;
   background: rgba(0, 0, 0, 0.5);
   height: 100%;
   width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
+  justify-content: center;
 }
 
 .container {
@@ -133,6 +133,14 @@ nav ul li a {
 .search-bar {
   display: flex;
   justify-content: center;
+  position: absolute;
+  bottom: -45px;
+  background-color: white;
+  border-radius: 15px;
+  padding: 30px;
+  width: max-content;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+
 }
 
 .search-bar input {
@@ -140,6 +148,8 @@ nav ul li a {
   margin: 0 5px;
   border: none;
   border-radius: 5px;
+  border: 2px solid rgba(0, 0, 0, .5);
+
 }
 
 .btn-search {
@@ -261,6 +271,10 @@ section h2 {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.promo-menarik h2{
+  margin-top: 50px;
 }
 
 section h2 {
