@@ -444,3 +444,10 @@ footer {
 .profile-links img{
   width: 80%;
 }
+
+.copyright{
+  color: black;
+  text-align: center;
+  padding: 15px;
+  font-weight: bold;
+}

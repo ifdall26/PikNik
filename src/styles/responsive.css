@@ -1,0 +1,43 @@
+@media (max-width: 768px) {
+  .hero-text{
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .search-bar{
+    flex-direction: column;
+    gap: 10px;
+  }
+  .search-bar button{
+    width: 98%;
+    align-self: center;
+  }
+  .pa-3{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .nav-bar ul{
+    flex-direction: column;
+  }
+  .promo-menarik .card{
+    width: 100%;
+  }
+  .info-destinasi .card{
+    flex-direction: column;
+  }
+  .populer-destinasi .container{
+    padding: 20px;
+  }
+  .populer-destinasi .card{
+    width: 100%;
+  }
+  .p-3{
+    padding: 20px;
+  }
+  .contact-form form{
+    width: 70%;
+  }
+  .developer-profiles{
+    flex-direction: column;
+    display: inline-flex;
+  }
+}
