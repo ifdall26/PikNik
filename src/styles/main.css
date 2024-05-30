@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 header {
@@ -70,6 +70,10 @@ nav {
   padding: 5px 0;
 }
 
+.menu{
+  font-family: "Inter", sans-serif;
+}
+
 .logo{
   flex: auto;
 }
@@ -103,6 +107,8 @@ nav ul li a {
 .hero-text h1 {
   font-size: 4em;
   margin-bottom: 10px;
+  font-family: "Rochester", cursive;
+  font-weight: 50;
 }
 
 .hero-text p {
