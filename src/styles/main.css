@@ -12,6 +12,7 @@ header {
   background-image: url('../public/images/hero-image.png'); /* Ganti dengan URL gambar latar belakang Anda */
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   height: 100vh;
   position: relative;
   color: white;
@@ -49,7 +50,7 @@ header {
 
 .navbar-search-bar{
   flex-basis: auto;
-  flex-grow: 8;
+  flex-grow: 6;
   flex-shrink: 1;
 }
 
@@ -86,6 +87,12 @@ nav ul li a {
   color: white;
   text-decoration: none;
   font-weight: bold;
+}
+
+.drawer-button {
+  width: 44px;
+  height: 44px;
+  display: none;
 }
 
 .hero-text {

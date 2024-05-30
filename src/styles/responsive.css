@@ -50,4 +50,22 @@
   .menu{
     display: none;
   }
+  .drawer-button {
+    display: block;
+    margin-left: 25px;
+    line-height: 70px;
+    color: white;
+    position: absolute;
+    margin-top: 7px;
+    margin-right: 25px;
+    top: 0px;
+    right: 0px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  .navbar-search-bar{
+    margin-right: 45px;
+  }
 }
