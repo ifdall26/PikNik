@@ -69,3 +69,47 @@
     margin-right: 45px;
   }
 }
+
+@media (max-width: 1200px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    transition: all 0.3s linear;
+  }
+
+  .menu.open {
+    display: flex;
+    position: absolute;
+    top: 85px;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    padding: 15px;
+    padding-top: 0;
+  }
+
+  .drawer-button {
+    display: block;
+    margin-left: 25px;
+    line-height: 70px;
+    color: white;
+    position: absolute;
+    margin-top: 7px;
+    margin-right: 25px;
+    top: 0px;
+    right: 0px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .menu li{
+    margin-top: 15px;
+  }
+
+  .navbar-search-bar {
+    margin-right: 45px;
+  }
+
+}
