@@ -344,7 +344,7 @@ section h2 span {
 }
 
 .tentang .container img{
-  width: 60%;
+  width: 35%;
   margin-top: 10px;
   margin-bottom: 40px;
 }
@@ -441,6 +441,7 @@ footer {
 .profile-links a {
   display: inline-block;
   margin: 0 10px;
+  opacity: .8;
 }
 
 .developer-profiles .profile {
@@ -470,6 +471,7 @@ footer {
 
 .profile-links img{
   width: 80%;
+  opacity: .8;
 }
 
 .copyright{
