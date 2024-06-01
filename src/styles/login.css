@@ -87,7 +87,7 @@ body, html {
   text-decoration: none;
 }
 
-.backImg{
+.rectangle{
   position: absolute;
   top: 0;
   left: 0;
@@ -95,8 +95,20 @@ body, html {
   transition: .3s;
 }
 
+.plane-icon1{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.plane-icon2{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
 @media (max-width: 768px) {
-  .backImg{
+  .rectangle{
     left: -300px;
   }
   
