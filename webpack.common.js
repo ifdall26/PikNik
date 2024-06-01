@@ -5,6 +5,8 @@ const path = require('path');
 module.exports = {
   entry: {
     app: path.resolve(__dirname, 'src/scripts/index.js'),
+    login: path.resolve(__dirname, 'src/scripts/login.js'),
+    register: path.resolve(__dirname, 'src/scripts/register.js'),
   },
   output: {
     filename: '[name].bundle.js',
@@ -30,6 +32,17 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: path.resolve(__dirname, 'src/templates/index.html'),
+      chunks: ['app'],
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'login.html',
+      template: path.resolve(__dirname, 'src/templates/login.html'),
+      chunks: ['login'],
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'register.html',
+      template: path.resolve(__dirname, 'src/templates/register.html'),
+      chunks: ['register'],
     }),
     new CopyWebpackPlugin({
       patterns: [
