@@ -1,4 +1,4 @@
-import '../styles/register.css';
+import '../styles/login.css';
 
 document.getElementById('registerForm').addEventListener('submit', (e) => {
   e.preventDefault();

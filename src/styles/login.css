@@ -1,0 +1,103 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background-image: url('../public/images/hero-image.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.container {
+  display: flex;
+  width: 80%;
+  height: 70%;
+  max-width: 1200px;
+  border-radius: 20px;
+  border-top-left-radius: 250px;
+  border-bottom-left-radius: 250px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+.left {
+  flex: 1;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.left img {
+  max-width: 60%;
+  height: auto;
+}
+.right {
+  flex: 1;
+  background-color: rgba(9, 179, 228, .7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.login-box {
+  text-align: center;
+  width: 80%;
+}
+.login-box h2 {
+  font-family: "Rochester", cursive;
+  margin-bottom: 10px;
+  font-size: 48px;
+  color: #ffffff;
+}
+.login-box p {
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #ffffff;
+}
+.login-box input[type="email"],
+.login-box input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+}
+.login-box button {
+  padding: 10px 20px;
+  background-color: #f7931e;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.login-box button:hover {
+  background-color: #e67e22;
+}
+.login-box a {
+  display: block;
+  margin-top: 10px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.backImg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  transition: .3s;
+}
+
+@media (max-width: 768px) {
+  .backImg{
+    left: -300px;
+  }
+  
+}
