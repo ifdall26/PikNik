@@ -90,4 +90,4 @@ Kami berkomitmen untuk menciptakan solusi inovatif yang bermanfaat bagi masyarak
 
 ## 📧 Kontak
 
-Untuk informasi lebih lanjut, silakan hubungi kami di [email@example.com](mailto:email@example.com).
+Untuk informasi lebih lanjut, silakan hubungi kami di [email@example.com](lisyukri.ifdal@gmail.com).
