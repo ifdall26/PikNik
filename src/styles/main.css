@@ -264,6 +264,11 @@ section h2 {
   font-size: 1.5em;
 }
 
+.card h3 a{
+  text-decoration: none;
+  color: #333;
+}
+
 .card-content .rating {
   text-align: left;
   margin-bottom: 10px;
