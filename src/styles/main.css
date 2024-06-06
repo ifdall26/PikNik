@@ -201,11 +201,12 @@ section h2 {
   margin: 15px;
   width: calc(50% - 30px);
   box-sizing: border-box;
+  transition: .3s;
 }
 
-/* .card {
-  width: calc(50% - 30px);
-} */
+.card:hover {
+  box-shadow: 0px 0px 5px rgba(9, 179, 228, 0.8);
+}
 
 .model-2{
   position: relative;
@@ -225,6 +226,7 @@ section h2 {
 .card img {
   width: 100%;
   object-fit: cover;
+  transition: .3s;
 }
 
 .card-content {
@@ -273,6 +275,10 @@ section h2 {
   color: #666;
 }
 
+.card img:hover{
+  transform: scale(1.1);
+}
+
 .populer-destinasi .container {
   display: flex;
   flex-direction: row;
@@ -317,6 +323,7 @@ section h2 span {
   background-color: rgba(255, 255, 255, .7);
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
+  z-index: 10;
 }
 
 .loc h3 {
