@@ -457,6 +457,22 @@ footer {
   opacity: .8;
 }
 
+.profile-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  padding: 10px;
+}
+
+.profile-icon img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+
 .developer-profiles .profile {
   text-align: center;
   max-width: 200px;
