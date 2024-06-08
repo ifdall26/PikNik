@@ -8,5 +8,12 @@ document.getElementById('loginForm').addEventListener('submit', (e) => {
   console.log('Email:', email);
   console.log('Password:', password);
 
+  // Simpan informasi login di local storage
+  localStorage.setItem('isLoggedIn', 'true');
+  localStorage.setItem('userEmail', email);
+
   alert('Login form submitted');
+
+  // Redirect ke halaman utama setelah login
+  window.location.href = 'index.html';
 });

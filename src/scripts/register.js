@@ -8,5 +8,12 @@ document.getElementById('registerForm').addEventListener('submit', (e) => {
   console.log('Email:', email);
   console.log('Password:', password);
 
+  // Simpan informasi registrasi di local storage
+  localStorage.setItem('isLoggedIn', 'true');
+  localStorage.setItem('userEmail', email);
+
   alert('Register form submitted');
+
+  // Redirect ke halaman utama setelah registrasi
+  window.location.href = 'index.html';
 });
