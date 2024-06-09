@@ -44,6 +44,11 @@ module.exports = {
       template: path.resolve(__dirname, 'src/templates/register.html'),
       chunks: ['register'],
     }),
+    new HtmlWebpackPlugin({
+      filename: 'profil.html',
+      template: path.resolve(__dirname, 'src/templates/profil.html'),
+      chunks: ['profil'],
+    }),
     new CopyWebpackPlugin({
       patterns: [
         {

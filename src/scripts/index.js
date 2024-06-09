@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const userProfileSection = document.getElementById('userProfile');
   const profilePopup = document.getElementById('profilePopup');
   const logoutButton = document.getElementById('logoutButton');
+  const profileButton = document.getElementById('profileButton');
 
   const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
   const userEmail = localStorage.getItem('userEmail');
@@ -55,5 +56,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   registerButton.addEventListener('click', () => {
     window.location.href = 'register.html';
+  });
+
+  profileButton.addEventListener('click', () => {
+    window.location.href = 'profil.html';
   });
 });
