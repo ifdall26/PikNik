@@ -57,10 +57,13 @@ header .profile-icon img {
   flex-direction: column;
   margin-top: 20px;
   padding: 20px 40px;
+  padding-left: 150px;
+  padding-right: 150px;
 }
 
 aside {
   width: 95%;
+  height: fit-content;
   background-color: #fff;
   padding: 20px;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
@@ -132,35 +135,59 @@ main {
   border-radius: 10px;
 }
 
-main .data-pribadi {
+main .data-pribadi, main .pesanan-saya {
   background-color: #fff;
   padding: 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
 }
 
-main .data-pribadi h3 {
+main .data-pribadi h3, main .pesanan-saya h3 {
   margin-top: 0;
   color: #ff6600;
 }
 
-main .data-pribadi form {
+main .data-pribadi form, main .pesanan-saya {
   display: flex;
   flex-direction: column;
 }
 
-main .data-pribadi form label {
+main .data-pribadi form label, main .pesanan-saya label {
   margin-bottom: 5px;
   font-weight: bold;
 }
 
-main .data-pribadi form input {
+main .data-pribadi form input, main .pesanan-saya input {
   margin-bottom: 10px;
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 4px;
   background-color: #f9f9f9;
   color: #333;
+}
+
+main .pesanan-saya .order-item {
+  display: flex;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+main .pesanan-saya .order-item img {
+  height: 100px;
+  width: 150px;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+main .pesanan-saya .order-item .order-details h4 {
+  margin: 0;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+main .pesanan-saya .order-item .order-details p {
+  margin: 5px 0;
 }
 
 footer {
@@ -193,4 +220,19 @@ footer {
       padding-left: 20px;
       padding-right: 20px;
   }
+  .container{
+    padding-left: 25px;
+    padding-right: 25px;
+  }
 }
+
+/* Hide inactive content */
+.content {
+  display: none;
+}
+
+.content.active {
+  display: block;
+}
+
+

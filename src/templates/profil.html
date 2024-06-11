@@ -10,6 +10,15 @@
         <div class="logo">
             <img src="./images/logo_Piknik__1.png" alt="PikNik Logo">
         </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Destinasi</a></li>
+                <li><a href="#">Populer</a></li>
+                <li><a href="#">Tentang</a></li>
+                <li><a href="#">Kontak</a></li>
+            </ul>
+        </nav>
         <div class="profile-icon">
             <img src="./images/user.webp" alt="Profile Icon">
         </div>
@@ -21,22 +30,22 @@
                 <h2>Username</h2>
             </div>
             <ul>
-                <li>Data Pribadi</li>
-                <li>Pesanan Saya</li>
+                <li id="dataPribadiTab" class="active">Data Pribadi</li>
+                <li id="pesananSayaTab">Pesanan Saya</li>
             </ul>
             <div class="account-actions">
-                <button>Akun Anda</button>
                 <button>Logout</button>
             </div>
         </aside>
         <main>
-            <div class="data-pribadi">
-                <h3>Data Pribadi</h3>
-                <form>
+            <div id="dataPribadiContent" class="content active">
+                <div class="data-pribadi">
+                    <h3>Data Pribadi</h3>
+                    <form>
                     <label for="name">Nama Lengkap</label>
                     <input type="text" id="name" value="noname">
 
-                    <label for="email">Alamat Email</label>
+                        <label for="email">Alamat Email</label>
                     <input type="email" id="email" value="noname@gmail.com">
 
                     <label for="phone">No. Telepon</label>
@@ -44,12 +53,27 @@
 
                     <label for="address">Alamat Rumah</label>
                     <input type="text" id="address" value="Jl. Aceh No.12">
-                </form>
+                    </form>
+                </div>
+            </div>
+            <div id="pesananSayaContent" class="content">
+                <div class="pesanan-saya">
+                    <h3>Daftar Pembelian</h3>
+                    <div class="order-item">
+                        <img src="raja-ampat.jpg" alt="Raja Ampat">
+                        <div class="order-details">
+                            <h4>Raja Ampat</h4>
+                            <p><strong>Tanggal Pemberangkatan:</strong> 08-Juni-2024</p>
+                            <p><strong>Tanggal Kembali:</strong> 05-Juni-2024</p>
+                            <p><strong>Nomor Perjalanan:</strong> 001-RAJA-AMPAT</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </main>
     </div>
     <footer>
-        <p>Project Plan_C624-PS062 &copy; 2024, Dicoding Academy</p>
+        Project Plan_C624-PS062 &copy; 2024, Dicoding Academy
     </footer>
     <script src="./scripts/profil.js"></script>
 </body>
