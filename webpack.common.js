@@ -6,6 +6,7 @@ module.exports = {
   entry: {
     app: path.resolve(__dirname, 'src/scripts/index.js'),
     login: path.resolve(__dirname, 'src/scripts/login.js'),
+    profil: path.resolve(__dirname, 'src/scripts/profil.js'),
     register: path.resolve(__dirname, 'src/scripts/register.js'),
   },
   output: {

@@ -1,0 +1,196 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #e5e5e5;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 10px 40px; 
+  padding-left: 150px;
+  padding-right: 150px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header .logo img {
+  height: 68px;
+}
+
+header .search-bar {
+  flex: 1;
+  margin: 10px 20px; 
+  padding: 10px 20px; 
+  border: 1px solid #ccc;
+  border-radius: 20px;
+}
+
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+header nav ul li {
+  margin-left: 20px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+header .profile-icon img {
+  height: 40px;
+  border-radius: 50%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  padding: 20px 40px;
+}
+
+aside {
+  width: 95%;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+aside .profile {
+  text-align: center;
+}
+
+aside .profile img {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+aside .profile h2 {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #007bff;
+}
+
+aside ul {
+  list-style: none;
+  padding: 0;
+  margin: 0; /* Reset margin */
+}
+
+aside ul li {
+  padding: 10px;
+  background-color: #f1f1f1;
+  margin: 10px 0;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+aside ul li.active,
+aside ul li:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+aside .account-actions {
+  margin-top: 20px;
+  text-align: center;
+}
+
+aside .account-actions button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+main {
+  width: 95%;
+  flex: 1;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+main .data-pribadi {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+main .data-pribadi h3 {
+  margin-top: 0;
+  color: #ff6600;
+}
+
+main .data-pribadi form {
+  display: flex;
+  flex-direction: column;
+}
+
+main .data-pribadi form label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+main .data-pribadi form input {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 200px;
+}
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+  .container {
+      flex-direction: row;
+  }
+
+  aside {
+      width: 250px;
+      margin-bottom: 0;
+  }
+
+  main {
+      width: 80%;
+      margin-left: 20px;
+  }
+}
+
+@media (max-width:768px) {
+  header{
+      padding-left: 20px;
+      padding-right: 20px;
+  }
+}

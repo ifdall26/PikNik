@@ -1,10 +1,56 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PikNik Profile</title>
 </head>
 <body>
-  <h1>ini adalah halaman profil</h1>
+    <header>
+        <div class="logo">
+            <img src="./images/logo_Piknik__1.png" alt="PikNik Logo">
+        </div>
+        <div class="profile-icon">
+            <img src="./images/user.webp" alt="Profile Icon">
+        </div>
+    </header>
+    <div class="container">
+        <aside>
+            <div class="profile">
+                <img src="./images/user.webp" alt="Profile Image">
+                <h2>Username</h2>
+            </div>
+            <ul>
+                <li>Data Pribadi</li>
+                <li>Pesanan Saya</li>
+            </ul>
+            <div class="account-actions">
+                <button>Akun Anda</button>
+                <button>Logout</button>
+            </div>
+        </aside>
+        <main>
+            <div class="data-pribadi">
+                <h3>Data Pribadi</h3>
+                <form>
+                    <label for="name">Nama Lengkap</label>
+                    <input type="text" id="name" value="noname">
+
+                    <label for="email">Alamat Email</label>
+                    <input type="email" id="email" value="noname@gmail.com">
+
+                    <label for="phone">No. Telepon</label>
+                    <input type="text" id="phone" value="080125643164">
+
+                    <label for="address">Alamat Rumah</label>
+                    <input type="text" id="address" value="Jl. Aceh No.12">
+                </form>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <p>Project Plan_C624-PS062 &copy; 2024, Dicoding Academy</p>
+    </footer>
+    <script src="./scripts/profil.js"></script>
 </body>
 </html>
