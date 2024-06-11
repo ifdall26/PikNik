@@ -37,6 +37,10 @@
   .populer-destinasi .card{
     width: 100%;
   }
+  .info-destinasi .card img{
+    width: 100%;
+  }
+  
   .p-3{
     padding: 20px;
   }

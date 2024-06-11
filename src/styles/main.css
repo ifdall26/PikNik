@@ -197,6 +197,10 @@ section h2 {
   align-items: center;
 }
 
+.info-destinasi .card img{
+  width: 40%;
+}
+
 .card {
   display: flex;
   background: white;
