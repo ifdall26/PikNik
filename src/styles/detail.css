@@ -56,6 +56,10 @@ section.content, section.map, section.services, section.booking{
   border-radius: 20px;
 }
 
+iframe{
+  width: 100%;
+}
+
 .content, .map, .services, .booking {
   padding: 20px;
 }
