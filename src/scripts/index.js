@@ -4,7 +4,6 @@ import 'regenerator-runtime';
 import '../styles/main.css';
 import '../styles/responsive.css';
 
-// event listener untuk drawer button
 document.addEventListener('DOMContentLoaded', async () => {
   const hamburgerButton = document.getElementById('hamburgerButton');
   const navMenu = document.getElementById('navMenu');
@@ -91,7 +90,7 @@ function displayDestinasi(data) {
       <div class="card card-info">
         <img src="${destinasi.gambar}" alt="${destinasi.nama_destinasi}">
         <div class="card-content">
-          <h3><a href="#">${destinasi.nama_destinasi}</a></h3>
+          <h3><a href="#" class="detail-link" data-destinasi='${JSON.stringify(destinasi)}'>${destinasi.nama_destinasi}</a></h3>
           <p>${destinasi.deskripsi}</p>
         </div>
       </div>
@@ -114,5 +113,16 @@ function displayDestinasi(data) {
       `;
       populerDestinasiContainer.innerHTML += cardPopuler;
     }
+  });
+
+  // Add event listeners to detail links
+  const detailLinks = document.querySelectorAll('.detail-link');
+  detailLinks.forEach((link) => {
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+      const destinasi = JSON.parse(event.target.getAttribute('data-destinasi'));
+      localStorage.setItem('selectedDestinasi', JSON.stringify(destinasi));
+      window.location.href = 'detail.html';
+    });
   });
 }
