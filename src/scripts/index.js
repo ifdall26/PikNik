@@ -1,9 +1,11 @@
+/* eslint-disable consistent-return */
+/* eslint-disable no-use-before-define */
 import 'regenerator-runtime';
 import '../styles/main.css';
 import '../styles/responsive.css';
 
 // event listener untuk drawer button
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
   const hamburgerButton = document.getElementById('hamburgerButton');
   const navMenu = document.getElementById('navMenu');
 
@@ -59,6 +61,58 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   profileButton.addEventListener('click', () => {
-    window.location.href = 'profil.html';
+    window.location.href = 'profile.html';
   });
+
+  // Fetch and display destinasi data
+  const destinasiData = await fetchDestinasiData();
+  displayDestinasi(destinasiData);
 });
+
+async function fetchDestinasiData() {
+  try {
+    const response = await fetch('data/data.json');
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error('Error fetching destinasi data:', error);
+  }
+}
+
+function displayDestinasi(data) {
+  const infoDestinasiContainer = document.querySelector('.info-destinasi .container');
+  const populerDestinasiContainer = document.querySelector('.populer-destinasi .container');
+
+  infoDestinasiContainer.innerHTML = '';
+  populerDestinasiContainer.innerHTML = '';
+
+  data.forEach((destinasi, index) => {
+    const cardInfo = `
+      <div class="card card-info">
+        <img src="${destinasi.gambar}" alt="${destinasi.nama_destinasi}">
+        <div class="card-content">
+          <h3><a href="#">${destinasi.nama_destinasi}</a></h3>
+          <p>${destinasi.deskripsi}</p>
+        </div>
+      </div>
+    `;
+    infoDestinasiContainer.innerHTML += cardInfo;
+
+    if (index < 3) { // menampilkan 3 destinasi populer
+      const cardPopuler = `
+        <div class="card model-2">
+          <div class="loc">
+            <div class="location">Kota: ${destinasi.lokasi}</div>
+            <h3>${destinasi.nama_destinasi}</h3>
+          </div>
+          <img src="${destinasi.gambar}" alt="${destinasi.nama_destinasi}">
+          <div class="card-content">
+            <div class="rating">Rating: <span>${destinasi.rating}</span></div>
+            <p>${destinasi.deskripsi}</p>
+          </div>
+        </div>
+      `;
+      populerDestinasiContainer.innerHTML += cardPopuler;
+    }
+  });
+}
