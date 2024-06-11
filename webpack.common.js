@@ -8,6 +8,7 @@ module.exports = {
     login: path.resolve(__dirname, 'src/scripts/login.js'),
     profil: path.resolve(__dirname, 'src/scripts/profil.js'),
     register: path.resolve(__dirname, 'src/scripts/register.js'),
+    detail: path.resolve(__dirname, 'src/scripts/detail.js'),
   },
   output: {
     filename: '[name].bundle.js',
@@ -49,6 +50,11 @@ module.exports = {
       filename: 'profil.html',
       template: path.resolve(__dirname, 'src/templates/profil.html'),
       chunks: ['profil'],
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'detail.html',
+      template: path.resolve(__dirname, 'src/templates/detail.html'),
+      chunks: ['detail'],
     }),
     new CopyWebpackPlugin({
       patterns: [
