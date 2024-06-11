@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   });
 
   profileButton.addEventListener('click', () => {
-    window.location.href = 'profile.html';
+    window.location.href = 'profil.html';
   });
 
   // Fetch and display destinasi data
