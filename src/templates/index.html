@@ -8,129 +8,71 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rochester&display=swap" rel="stylesheet">
  
-  <title>PikNik</title>
+    <title>PikNik</title>
 </head>
 <body>
     <header>
-      <div class="overlay">
-          <div class="container full-width">
-            <div class="container nav-bar full-width pa-3 bg">
-              <nav>
-                  <div class="logo">
-                      <img src="./images/logo_Piknik__1.png" alt="PikNik Logo">
-                  </div>
-                  <div class="navbar-search-bar">
-                    <input class="nav-search" type="text" placeholder="Mau Piknik Dimana?">
-                  </div>
-                  <br>
-                  <ul id="navMenu" class="menu">
-                      <li><a href="#">Home</a></li>
-                      <li><a href="#info-destinasi">Destinasi</a></li>
-                      <li><a href="#populer-destinasi">Populer</a></li>
-                      <li><a href="#tentang">Tentang</a></li>
-                      <li><a href="#contact">Kontak</a></li>
-                  </ul>
-                  <div id="userProfile" class="profile-icon" style="display: none;">
-                    <img src="./images/user.webp" alt="User Profile">
-                    <div id="profilePopup" class="profile-popup">
-                        <span id="userEmail"></span>
-                        <hr>
-                        <a href="#" id="profileButton">Profile</a>
-                        <hr>
-                        <a href="#" id="logoutButton">Keluar</a>
+        <div class="overlay">
+            <div class="container full-width">
+                <div class="container nav-bar full-width pa-3 bg">
+                    <nav>
+                        <div class="logo">
+                            <img src="./images/logo_Piknik__1.png" alt="PikNik Logo">
+                        </div>
+                        <div class="navbar-search-bar">
+                            <input class="nav-search" type="text" placeholder="Mau Piknik Dimana?">
+                        </div>
+                        <br>
+                        <ul id="navMenu" class="menu">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#info-destinasi">Destinasi</a></li>
+                            <li><a href="#populer-destinasi">Populer</a></li>
+                            <li><a href="#tentang">Tentang</a></li>
+                            <li><a href="#contact">Kontak</a></li>
+                        </ul>
+                        <div id="userProfile" class="profile-icon" style="display: none;">
+                            <img src="./images/user.webp" alt="User Profile">
+                            <div id="profilePopup" class="profile-popup">
+                                <span id="userEmail"></span>
+                                <hr>
+                                <a href="#" id="profileButton">Profile</a>
+                                <hr>
+                                <a href="#" id="logoutButton">Keluar</a>
+                            </div>
+                        </div>
+                        <button class="drawer-button" id="hamburgerButton" aria-label="Menu">☰</button>
+                    </nav>
+                </div>
+                <div class="hero-text">
+                    <h1>Selamat Menikmati</h1>
+                    <p>Keindahan Negeri kita dengan <img src="./images/logo_Piknik__2.png" alt="logo piknik"></p>
+                    <div class="buttons">
+                        <button class="btn btn-orange">Masuk</button>
+                        <button class="btn btn-blue">Daftar</button>
                     </div>
                 </div>
-                  <button class="drawer-button" id="hamburgerButton" aria-label="Menu">☰</button>
-              </nav>
             </div>
-              <div class="hero-text">
-                  <h1>Selamat Menikmati</h1>
-                  <p>Keindahan Negeri kita dengan <img src="./images/logo_Piknik__2.png" alt="logo piknik"></p>
-                  <div class="buttons">
-                      <button class="btn btn-orange">Masuk</button>
-                      <button class="btn btn-blue">Daftar</button>
-                  </div>
-              </div>
-          </div>
-      </div>
+        </div>
     </header>
     <main>
         <section class="info-destinasi" id="info-destinasi">
-          <h2><span>Informasi</span> Destinasi</h2>
-            <div class="container">
-                <div class="card card-info">
-                    <img src="images/dest_1.png" alt="Destinasi 1">
-                    <div class="card-content">
-                        <h3><a href="#">Destinasi 1</a></h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
-                </div>
-                <div class="card card-info">
-                    <img src="images/dest_1.png" alt="Destinasi 2">
-                    <div class="card-content">
-                        <h3><a href="#">Destinasi 2</a></h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
-                </div>
-                <div class="card card-info">
-                    <img src="images/dest_1.png" alt="Destinasi 3">
-                    <div class="card-content">
-                        <h3><a href="#">Destinasi 3</a></h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
-                </div>
-            </div>
+            <h2><span>Informasi</span> Destinasi</h2>
+            <div class="container"></div>
         </section>
-      
+
         <section class="populer-destinasi" id="populer-destinasi">
-          <h2><span>POPULER</span> DESTINASI</h2>
+            <h2><span>POPULER</span> DESTINASI</h2>
+            <div class="container"></div>
+        </section>
+
+        <section class="tentang bg-blue" id="tentang">
+            <h2><span style="color: white;">TENTANG</span> KAMI</h2>
             <div class="container">
-                <div class="card model-2">
-                  <div class="loc">
-                    <div class="location">Kota: Papua Barat</div>
-                    <h3>Raja Ampat</h3>
-                  </div>
-                    <img src="images/dest_1.png" alt="Populer 1">
-                    <div class="card-content">
-                        <div class="rating">Rating: <span>4.0</span></div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
-                </div>
-                <div class="card model-2">
-                  <div class="loc">
-                    <div class="location">Kota: Papua Barat</div>
-                    <h3>Raja Ampat</h3>
-                  </div>
-                    <img src="images/dest_1.png" alt="Populer 1">
-                    <div class="card-content">
-                        <div class="rating">Rating: <span>4.0</span></div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
-                </div>
-                <div class="card model-2">
-                  <div class="loc">
-                    <div class="location">Kota: Papua Barat</div>
-                    <h3>Raja Ampat</h3>
-                  </div>
-                    <img src="images/dest_1.png" alt="Populer 1">
-                    <div class="card-content">
-                        <div class="rating">Rating: <span>4.0</span></div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
-                </div>
-                
+                <img src="images/logo_Piknik__3.png" alt="loho PikNik">
+                <p>PIKNIK (Platform Interaktif Nikmati Keindahan Negeri Kita) adalah aplikasi web yang bertujuan utama sebagai penyedia layanan travel untuk destinasi wisata di seluruh Indonesia.</p>
             </div>
         </section>
-      
-        <section class="tentang bg-blue" id="tentang">
-          <h2><span style="color: white;">TENTANG</span> KAMI</h2>
-          <div class="container">
-            <img src="images/logo_Piknik__3.png" alt="loho PikNik">
-            <p>PIKNIK (Platform Interaktif Nikmati Keindahan Negeri Kita) adalah aplikasi web yang bertujuan utama sebagai penyedia layanan travel untuk destinasi wisata di seluruh Indonesia.</p>
-      
-          </div>
-        </section>
-      
+
         <section class="contact" id="contact">
             <h2>KONTAK KAMI</h2>
             <div class="contact-form">
@@ -145,54 +87,51 @@
         </section>
     </main>
 
-  <footer>
-      <div class="footer-social">
-          <h3>SOSIAL MEDIA PikNik</h3>
-          <div class="social-icons">
-              <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
-              <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
-              <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
-          </div>
-      </div>
-      <div class="footer-developer">
-          <h3>SOSIAL MEDIA DEVELOPER</h3>
-          <div class="developer-profiles">
-              <div class="profile">
-                  <img class="photo" src="images/developer1.png" alt="Ismail Al Muzamal">
-                  <p>Ismail Al Muzamal</p>
-                  <div class="profile-links">
-                      <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
-                      <a href="#"><img src="images/linkedin.png" alt="LinkedIn"></a>
-                      <a href="#"><img src="images/github.png" alt="GitHub"></a>
-                  </div>
-              </div>
-
-              <div class="profile">
-                  <img class="photo" src="images/developer2.png" alt="Ilham Abdul Mugni">
-                  <p>Ilham Abdul Mugni</p>
-                  <div class="profile-links">
-                      <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
-                      <a href="#"><img src="images/linkedin.png" alt="LinkedIn"></a>
-                      <a href="#"><img src="images/github.png" alt="GitHub"></a>
-                  </div>
-              </div>
-
-              <div class="profile">
-                  <img class="photo" src="images/developer3.png" alt="Ifdal Lisyukri">
-                  <p>Ifdal Lisyukri</p>
-                  <div class="profile-links">
-                      <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
-                      <a href="#"><img src="images/linkedin.png" alt="LinkedIn"></a>
-                      <a href="#"><img src="images/github.png" alt="GitHub"></a>
-                  </div>
-              </div>
-
-          </div>
-      </div>
-      <div class="copyright">
-        <p>Capstone Project_C624-PS062 © 2024, Dicoding Academy</p>
-      </div>
-  </footer>
-  <script src="./scripts/index.js"></script>
+    <footer>
+        <div class="footer-social">
+            <h3>SOSIAL MEDIA PikNik</h3>
+            <div class="social-icons">
+                <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
+                <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+            </div>
+        </div>
+        <div class="footer-developer">
+            <h3>SOSIAL MEDIA DEVELOPER</h3>
+            <div class="developer-profiles">
+                <div class="profile">
+                    <img class="photo" src="images/developer1.png" alt="Ismail Al Muzamal">
+                    <p>Ismail Al Muzamal</p>
+                    <div class="profile-links">
+                        <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+                        <a href="#"><img src="images/linkedin.png" alt="LinkedIn"></a>
+                        <a href="#"><img src="images/github.png" alt="GitHub"></a>
+                    </div>
+                </div>
+                <div class="profile">
+                    <img class="photo" src="images/developer2.png" alt="Ilham Abdul Mugni">
+                    <p>Ilham Abdul Mugni</p>
+                    <div class="profile-links">
+                        <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+                        <a href="#"><img src="images/linkedin.png" alt="LinkedIn"></a>
+                        <a href="#"><img src="images/github.png" alt="GitHub"></a>
+                    </div>
+                </div>
+                <div class="profile">
+                    <img class="photo" src="images/developer3.png" alt="Ifdal Lisyukri">
+                    <p>Ifdal Lisyukri</p>
+                    <div class="profile-links">
+                        <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+                        <a href="#"><img src="images/linkedin.png" alt="LinkedIn"></a>
+                        <a href="#"><img src="images/github.png" alt="GitHub"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Capstone Project_C624-PS062 © 2024, Dicoding Academy</p>
+        </div>
+    </footer>
+    <script src="./scripts/index.js"></script>
 </body>
 </html>
