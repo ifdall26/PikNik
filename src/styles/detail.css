@@ -98,6 +98,10 @@ footer {
 }
 
 /* Popup styles */
+#bookingPopup{
+  display: none;
+}
+
 .popup {
   display: none;
   position: fixed;
