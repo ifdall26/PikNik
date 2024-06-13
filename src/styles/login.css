@@ -102,6 +102,7 @@ body{
   left: 0;
   z-index: 0;
   transition: .3s;
+  height: 100%;
 }
 
 .plane-icon1{
@@ -116,12 +117,34 @@ body{
   left: 0;
 }
 
-@media (max-width: 768px) {
+@media (min-width:440px) and (max-width: 768px) {
   .rectangle{
     left: -300px;
   }
   .container{
     width: 90%;
   }
-  
+}
+
+@media (max-width :440px) {
+  .rectangle{
+    left: -320px;
+    height: 100%;
+  }
+  .right{
+    flex: 9999;
+    background-color: rgba(9, 179, 228, .8);
+    z-index: 9;
+  }
+  .container{
+    width: 95%;
+    height: 85%;
+  }
+}
+
+@media (min-width:768px) and (max-width: 884px) {
+  .rectangle{
+    height: 100%;
+    left: -370px;
+  }
 }

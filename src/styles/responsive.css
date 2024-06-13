@@ -1,4 +1,7 @@
 @media (max-width: 768px) {
+  section .container{
+    width: 90%;
+  }
   .hero-text{
     padding-left: 30px;
     padding-right: 30px;
@@ -70,7 +73,7 @@
     cursor: pointer;
   }
   .navbar-search-bar{
-    margin-right: 45px;
+    margin-left: 5px;
   }
 }
 
@@ -112,8 +115,20 @@
     margin-top: 15px;
   }
 
+  
+  }
+  
+@media (min-width:1200px) {
   .navbar-search-bar {
     margin-right: 45px;
   }
+}
 
+@media screen and (min-width: 768px) and (max-width: 884px){
+  .profile-icon img{
+    margin-right: 0px;
+  }
+  .info-destinasi .container, .populer-destinasi .container{
+    width: 90%;
+  }
 }
