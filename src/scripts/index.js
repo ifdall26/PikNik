@@ -1,3 +1,4 @@
+/* eslint-disable implicit-arrow-linebreak */
 /* eslint-disable consistent-return */
 /* eslint-disable no-use-before-define */
 import 'regenerator-runtime';
@@ -66,6 +67,17 @@ document.addEventListener('DOMContentLoaded', async () => {
   // Fetch and display destinasi data
   const destinasiData = await fetchDestinasiData();
   displayDestinasi(destinasiData);
+
+  // Add event listener for search bar
+  const searchBar = document.getElementById('searchBar');
+  searchBar.addEventListener('input', (event) => {
+    const searchTerm = event.target.value.toLowerCase();
+    const filteredData = destinasiData.filter((destinasi) =>
+      destinasi.nama_destinasi.toLowerCase().includes(searchTerm)
+      || destinasi.lokasi.toLowerCase().includes(searchTerm)
+      || destinasi.deskripsi.toLowerCase().includes(searchTerm));
+    displayDestinasi(filteredData);
+  });
 });
 
 async function fetchDestinasiData() {
