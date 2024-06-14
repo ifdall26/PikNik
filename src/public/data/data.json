@@ -95,5 +95,69 @@
     "lokasi": "Kalimantan Timur",
     "rating": 4.7,
     "mapSrc": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d457818.7396533243!2d118.46342415000001!3d2.22487435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3212abcef5b94afb%3A0xe4cf7029473436a9!2sDerawan%20Islands!5e1!3m2!1sen!2sid!4v1718144049170!5m2!1sen!2sid"
+  },
+  {
+    "gambar": "https://beritakini.co/files/images/20230516-sosoosoal.jpg",
+    "nama_destinasi": "Pulau Weh",
+    "deskripsi": "Pulau terluar Indonesia yang terkenal dengan keindahan bawah lautnya yang masih alami.",
+    "lokasi": "Aceh",
+    "rating": 4.5,
+    "mapSrc": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d79337.62487081588!2d95.2736827!3d5.860384749999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x304aa1e6debb7595%3A0x140157075f3fa5d1!2sPulau%20Weh!5e1!3m2!1sen!2sid!4v1718157791123!5m2!1sen!2sid"
+  },
+  {
+    "gambar": "https://akcdn.detik.net.id/community/media/visual/2021/07/05/wisata-super-prioritas-labuan-bajo_169.jpeg?w=700&q=90",
+    "nama_destinasi": "Pantai Pink",
+    "deskripsi": "Pantai dengan pasir berwarna pink yang langka, terletak di Pulau Komodo.",
+    "lokasi": "Nusa Tenggara Timur",
+    "rating": 4.6,
+    "mapSrc": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d113796.8470165122!2d119.43959565!3d-8.698660449999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2db485d9f3242f35%3A0x93e59d8df63db1e6!2sPink%20Beach!5e1!3m2!1sen!2sid!4v1718157876428!5m2!1sen!2sid"
+  },
+  {
+    "gambar": "https://1001indonesia.net/asset/2020/03/Tanjung-Papuma.jpg",
+    "nama_destinasi": "Pantai Papuma",
+    "deskripsi": "Pantai dengan pemandangan tebing karang yang eksotis dan pasir putihnya yang lembut.",
+    "lokasi": "Jember, Jawa Timur",
+    "rating": 4.5,
+    "mapSrc": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.9861466541236!2d113.58507021476817!3d-8.342026784092202!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd69634a674b5f9%3A0x28717a9a1a05c79f!2sPantai%20Papuma!5e1!3m2!1sen!2sid!4v1718157922567!5m2!1sen!2sid"
+  },
+  {
+    "gambar": "https://bafageh.com/uploads/images/blog/516123_teluk-kiluan.png",
+    "nama_destinasi": "Teluk Kiluan",
+    "deskripsi": "Teluk yang terkenal dengan lumba-lumba yang sering muncul di perairannya.",
+    "lokasi": "Lampung",
+    "rating": 4.6,
+    "mapSrc": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63571.86729595697!2d105.99137550000001!3d-5.90507235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d8cb0d2ed6f007%3A0xe664f6e0c5b8d818!2sTeluk%20Kiluan!5e1!3m2!1sen!2sid!4v1718157977731!5m2!1sen!2sid"
+  },
+  {
+    "gambar": "https://asset.kompas.com/crops/x9jM6VO5qWA81AtD0pRUlO6EjR0=/0x27:780x547/750x500/data/photo/2021/10/26/6177dda93b301.png",
+    "nama_destinasi": "Danau Matano",
+    "deskripsi": "Danau terdalam kedua di Indonesia dengan keindahan alam sekitarnya yang masih alami.",
+    "lokasi": "Sulawesi Selatan",
+    "rating": 4.7,
+    "mapSrc": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d166266.74126194923!2d121.51408139999999!3d-2.555317!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dcebc392d55666d%3A0x48d3eb9cf6c54d6e!2sLake%20Matano!5e1!3m2!1sen!2sid!4v1718158018240!5m2!1sen!2sid"
+  },
+  {
+    "gambar": "https://cdn.idntimes.com/content-images/post/20190723/2-1bae6f03d8c22cdbd91cb4e9c9f48a39_600x400.jpg",
+    "nama_destinasi": "Danau Batur",
+    "deskripsi": "Danau vulkanik di Bali yang terkenal dengan pemandangan matahari terbitnya.",
+    "lokasi": "Bali",
+    "rating": 4.7,
+    "mapSrc": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19822.205605347557!2d115.36816067121478!3d-8.242499190844462!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd2485f5c8cdd53%3A0xa5c08e688f7e7de8!2sLake%20Batur!5e1!3m2!1sen!2sid!4v1718158087862!5m2!1sen!2sid"
+  },
+  {
+    "gambar": "https://img.inews.co.id/media/822/files/inews_new/2023/05/09/Pulau_Mandeh.jpg",
+    "nama_destinasi": "Pulau Mandeh",
+    "deskripsi": "Pulau indah di Sumatera Barat dengan pantai yang berkilauan dan terumbu karang yang menakjubkan.",
+    "lokasi": "Sumatera Barat",
+    "rating": 4.5,
+    "mapSrc": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6358.745672991485!2d100.43303262963676!3d-0.7504956205920091!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d0bf95d1c4247d%3A0xfdb760bf86c32f35!2sMandeh%20Beach!5e1!3m2!1sen!2sid!4v1718158238055!5m2!1sen!2sid"
+  },
+  {
+    "gambar": "https://jsni.solokkab.go.id/wp-content/uploads/2023/03/img-5ddb7c425fec2.jpg",
+    "nama_destinasi": "Puncak Gagoan",
+    "deskripsi": "Destinasi hiking yang menawarkan pemandangan alam yang memukau di Solok, Sumatera Barat.",
+    "lokasi": "Sumatera Barat",
+    "rating": 4.6,
+    "mapSrc": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6356.989656764289!2d100.78823112963803!3d-0.8616825361126858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d0bf9b1bfb09bd%3A0x9e12b03a7b9ea5f5!2sPuncak%20Gagoan!5e1!3m2!1sen!2sid!4v1718159088252!5m2!1sen!2sid"
   }
 ]
