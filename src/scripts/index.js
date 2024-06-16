@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /* eslint-disable implicit-arrow-linebreak */
 /* eslint-disable consistent-return */
 /* eslint-disable no-use-before-define */
@@ -170,3 +171,22 @@ function addDetailLinksEventListeners() {
     });
   });
 }
+
+function sendEmail() {
+  const templateParams = {
+    name: document.getElementById('name').value,
+    email: document.getElementById('email').value,
+    message: document.getElementById('message').value,
+  };
+  emailjs.send('service_qjdczvi', 'template_60axdk9', templateParams)
+    .then((response) => {
+      console.log('SUCCESS!', response.status, response.text);
+      alert('Thank you for your feedback!');
+    }, (error) => {
+      console.log('FAILED...', error);
+      alert('Oops! Something went wrong.');
+    });
+}
+
+// Expose sendEmail to global scope
+window.sendEmail = sendEmail;
