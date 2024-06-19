@@ -52,13 +52,14 @@ header {
 .navbar-search-bar{
   flex-basis: auto;
   flex-grow: 6;
+  padding: 7px;
   flex-shrink: 1;
 }
 
 .nav-search{
   background-color: rgba(0, 0, 0, 0.5);
   width: 90%;
-  padding: 8px;
+  padding: 14.5px;
   border-radius: 5px;
   border: 0px;
   color: rgba(255, 255, 255, .7);
@@ -91,6 +92,7 @@ nav ul li {
 nav ul li a {
   color: white;
   text-decoration: none;
+  padding: 12px;
   font-weight: bold;
 }
 
@@ -141,12 +143,14 @@ nav ul li a {
   background-color: rgba(255, 166, 0, 0.8);
   border-radius: 8px;
   color: white;
+  padding: 13px;
 }
 
 .btn-blue {
   background-color: rgba(9, 179, 228, 0.8);
   border-radius: 8px;
   color: white;
+  padding: 13px;
 }
 
 .search-bar {
@@ -234,6 +238,7 @@ section h2 {
 
 .card img {
   width: 100%;
+  max-height: 250px;
   object-fit: cover;
   transition: .3s;
 }
@@ -276,6 +281,7 @@ section h2 {
 .card h3 a{
   text-decoration: none;
   color: #333;
+  padding: 6px;
 }
 
 .card-content .rating {
@@ -405,7 +411,7 @@ section h2 span {
 .contact-form input,
 .contact-form textarea {
   width: 100%;
-  padding: 10px;
+  padding: 13.5px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
@@ -417,6 +423,13 @@ section h2 span {
   border: none;
   cursor: pointer;
   border-radius: 5px;
+}
+
+.contact button {
+  height: 44px;
+  background-color: #eee;
+  border-radius: 5px;
+  border: 0.5px solid lightgray;
 }
 
 footer {
@@ -476,11 +489,16 @@ footer {
 }
 
 .profile-icon img {
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   margin-right: 50px;
   cursor: pointer;
+}
+
+.profile-links a img {
+  width: 44px;
+  height: 44px;
 }
 
 .profile-popup {
