@@ -1,7 +1,6 @@
-/* eslint-disable no-undef */
-/* eslint-disable implicit-arrow-linebreak */
-/* eslint-disable consistent-return */
+/* eslint-disable max-len */
 /* eslint-disable no-use-before-define */
+/* eslint-disable no-undef */
 import 'regenerator-runtime';
 import '../styles/main.css';
 import '../styles/responsive.css';
@@ -65,16 +64,20 @@ document.addEventListener('DOMContentLoaded', async () => {
     window.location.href = 'profil.html';
   });
 
-  // Fetch and display destinasi data
-  const destinasiData = await fetchDestinasiData();
-  displayDestinasi(destinasiData);
+  // Fetch and display destinasi data from API
+  try {
+    const destinasiData = await fetchDestinasiData();
+    displayDestinasi(destinasiData);
+  } catch (error) {
+    console.error('Error fetching destinasi data:', error);
+    // Handle error fetching data
+  }
 
   // Add event listener for search bar
   const searchBar = document.getElementById('searchBar');
   searchBar.addEventListener('input', (event) => {
     const searchTerm = event.target.value.toLowerCase();
-    const filteredData = destinasiData.filter((destinasi) =>
-      destinasi.nama_destinasi.toLowerCase().includes(searchTerm)
+    const filteredData = destinasiData.filter((destinasi) => destinasi.nama_destinasi.toLowerCase().includes(searchTerm)
       || destinasi.lokasi.toLowerCase().includes(searchTerm)
       || destinasi.deskripsi.toLowerCase().includes(searchTerm));
     displayFilteredDestinasi(filteredData);
@@ -83,11 +86,15 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 async function fetchDestinasiData() {
   try {
-    const response = await fetch('data/data.json');
+    const response = await fetch('http://localhost:3000/destinasi'); // Ganti URL sesuai dengan endpoint API Anda
+    if (!response.ok) {
+      throw new Error('Failed to fetch data');
+    }
     const data = await response.json();
     return data;
   } catch (error) {
     console.error('Error fetching destinasi data:', error);
+    throw error; // Rethrow error untuk menangkapnya di event handler di DOMContentLoaded
   }
 }
 
