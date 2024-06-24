@@ -25,8 +25,8 @@
             <p id="deskripsiDestinasi">Deskripsi destinasi akan muncul di sini.</p>
         </section>
         <section class="map">
-          <iframe id="mapSrc" src="" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </section>
+            <iframe id="mapSrc" src="" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
         <section class="services">
             <h3>Layanan & Fasilitas</h3>
             <ul>
@@ -38,52 +38,53 @@
             </ul>
         </section>
         <section class="booking">
-            <button>Booking</button>
+            <button id="bookingButton">Booking</button>
         </section>
     </main>
     <footer>
         <p>Project Plan_C042-PROG-2 © 2024, Dicoding Academy</p>
     </footer>
     <div id="bookingPopup" class="popup">
-      <div class="popup-content">
-          <span class="close">&times;</span>
-          <h2>Booking</h2>
-          <form>
-              <div class="form-group">
-                  <label for="tanggalCheckin">Tanggal Check-in:</label>
-                  <input type="date" id="tanggalCheckin" name="tanggalCheckin">
-              </div>
-              <div class="form-group">
-                  <label for="tanggalCheckout">Tanggal Check-out:</label>
-                  <input type="date" id="tanggalCheckout" name="tanggalCheckout">
-              </div>
-              <div class="form-group">
-                  <label for="jumlahTamu">Jumlah Tamu:</label>
-                  <input type="number" id="jumlahTamu" name="jumlahTamu" min="1">
-              </div>
-              <div class="form-group">
-                  <h3>Jenis Transportasi</h3>
-                  <button type="button">Pesawat</button>
-                  <button type="button">Kereta</button>
-                  <button type="button">Bus</button>
-              </div>
-              <div class="form-group">
-                  <h3>Jenis Penginapan</h3>
-                  <button type="button">Hotel</button>
-                  <button type="button">Hostel</button>
-                  <button type="button">Villa</button>
-              </div>
-              <div class="form-group">
-                  <h3>Metode Pembayaran</h3>
-                  <button type="button">Bank Transfer</button>
-                  <button type="button">Credit Card</button>
-                  <button type="button">PayPal</button>
-              </div>
-              <button type="submit" class="submit-button">Booking</button>
-          </form>
-      </div>
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <h2>Booking</h2>
+            <form id="bookingForm">
+                <div class="form-group">
+                    <label for="tanggalCheckin">Tanggal Check-in:</label>
+                    <input type="date" id="tanggalCheckin" name="tanggalCheckin">
+                </div>
+                <div class="form-group">
+                    <label for="tanggalCheckout">Tanggal Check-out:</label>
+                    <input type="date" id="tanggalCheckout" name="tanggalCheckout">
+                </div>
+                <div class="form-group">
+                    <label for="jumlahTamu">Jumlah Tamu:</label>
+                    <input type="number" id="jumlahTamu" name="jumlahTamu" min="1">
+                </div>
+                <div class="form-group">
+                    <h3>Jenis Transportasi</h3>
+                    <label><input type="radio" name="jenisTransportasi" value="Pesawat"> Pesawat</label>
+                    <label><input type="radio" name="jenisTransportasi" value="Kereta"> Kereta</label>
+                    <label><input type="radio" name="jenisTransportasi" value="Bus"> Bus</label>
+                </div>
+                <div class="form-group">
+                    <h3>Jenis Penginapan</h3>
+                    <label><input type="radio" name="jenisPenginapan" value="Hotel"> Hotel</label>
+                    <label><input type="radio" name="jenisPenginapan" value="Hostel"> Hostel</label>
+                    <label><input type="radio" name="jenisPenginapan" value="Villa"> Villa</label>
+                </div>
+                <div class="form-group">
+                    <h3>Metode Pembayaran</h3>
+                    <label><input type="radio" name="metodePembayaran" value="Bank Transfer"> Bank Transfer</label>
+                    <label><input type="radio" name="metodePembayaran" value="Credit Card"> Credit Card</label>
+                    <label><input type="radio" name="metodePembayaran" value="PayPal"> PayPal</label>
+                </div>
+                <button type="submit" class="submit-button">Booking</button>
+            </form>
+        </div>
     </div>
-  
+
     <script src="./scripts/detail.js"></script>
+    <script src="./scripts/booking.js"></script>
 </body>
 </html>

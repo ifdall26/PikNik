@@ -9,6 +9,7 @@ module.exports = {
     profil: path.resolve(__dirname, 'src/scripts/profil.js'),
     register: path.resolve(__dirname, 'src/scripts/register.js'),
     detail: path.resolve(__dirname, 'src/scripts/detail.js'),
+    booking: path.resolve(__dirname, 'src/scripts/booking.js'),
   },
   output: {
     filename: '[name].bundle.js',
