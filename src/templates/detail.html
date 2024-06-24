@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detail Destinasi</title>
+    <link rel="stylesheet" href="./styles/detail.css">
 </head>
 <body>
     <header>
@@ -63,27 +64,29 @@
                 </div>
                 <div class="form-group">
                     <h3>Jenis Transportasi</h3>
-                    <label><input type="radio" name="jenisTransportasi" value="Pesawat"> Pesawat</label>
-                    <label><input type="radio" name="jenisTransportasi" value="Kereta"> Kereta</label>
-                    <label><input type="radio" name="jenisTransportasi" value="Bus"> Bus</label>
+                    <button type="button" class="select-button" data-type="jenisTransportasi" data-value="Pesawat">Pesawat</button>
+                    <button type="button" class="select-button" data-type="jenisTransportasi" data-value="Kereta">Kereta</button>
+                    <button type="button" class="select-button" data-type="jenisTransportasi" data-value="Bus">Bus</button>
+                    <input type="hidden" id="jenisTransportasi" name="jenisTransportasi">
                 </div>
                 <div class="form-group">
                     <h3>Jenis Penginapan</h3>
-                    <label><input type="radio" name="jenisPenginapan" value="Hotel"> Hotel</label>
-                    <label><input type="radio" name="jenisPenginapan" value="Hostel"> Hostel</label>
-                    <label><input type="radio" name="jenisPenginapan" value="Villa"> Villa</label>
+                    <button type="button" class="select-button" data-type="jenisPenginapan" data-value="Hotel">Hotel</button>
+                    <button type="button" class="select-button" data-type="jenisPenginapan" data-value="Hostel">Hostel</button>
+                    <button type="button" class="select-button" data-type="jenisPenginapan" data-value="Villa">Villa</button>
+                    <input type="hidden" id="jenisPenginapan" name="jenisPenginapan">
                 </div>
                 <div class="form-group">
                     <h3>Metode Pembayaran</h3>
-                    <label><input type="radio" name="metodePembayaran" value="Bank Transfer"> Bank Transfer</label>
-                    <label><input type="radio" name="metodePembayaran" value="Credit Card"> Credit Card</label>
-                    <label><input type="radio" name="metodePembayaran" value="PayPal"> PayPal</label>
+                    <button type="button" class="select-button" data-type="metodePembayaran" data-value="Bank Transfer">Bank Transfer</button>
+                    <button type="button" class="select-button" data-type="metodePembayaran" data-value="Credit Card">Credit Card</button>
+                    <button type="button" class="select-button" data-type="metodePembayaran" data-value="PayPal">PayPal</button>
+                    <input type="hidden" id="metodePembayaran" name="metodePembayaran">
                 </div>
                 <button type="submit" class="submit-button">Booking</button>
             </form>
         </div>
     </div>
-
     <script src="./scripts/detail.js"></script>
 </body>
 </html>

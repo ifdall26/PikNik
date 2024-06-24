@@ -1,3 +1,5 @@
+/* eslint-disable no-shadow */
+/* eslint-disable no-unused-vars */
 /* eslint-disable no-alert */
 /* eslint-disable func-names */
 /* eslint-disable eqeqeq */
@@ -18,9 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   const popup = document.getElementById('bookingPopup');
-
-  const btn = document.querySelector('.booking button');
-
+  const btn = document.getElementById('openBookingForm');
   const span = document.getElementsByClassName('close')[0];
 
   btn.onclick = function () {
@@ -31,25 +31,38 @@ document.addEventListener('DOMContentLoaded', () => {
     popup.style.display = 'none';
   };
 
-  // When the user clicks anywhere outside of the popup, close it
   window.onclick = function (event) {
     if (event.target == popup) {
       popup.style.display = 'none';
     }
   };
 
-  // Event listener for booking form submission
+  const selectButtons = document.querySelectorAll('.select-button');
+  selectButtons.forEach((button) => {
+    button.addEventListener('click', function () {
+      const type = this.getAttribute('data-type');
+      const value = this.getAttribute('data-value');
+
+      document.getElementById(type).value = value;
+
+      selectButtons.forEach((btn) => {
+        if (btn.getAttribute('data-type') === type) {
+          btn.classList.remove('selected');
+        }
+      });
+      this.classList.add('selected');
+    });
+  });
+
   document.getElementById('bookingForm').addEventListener('submit', async (e) => {
     e.preventDefault();
-
-    console.log('Form submitted'); // Debugging log
 
     const tanggalCheckin = document.getElementById('tanggalCheckin').value;
     const tanggalCheckout = document.getElementById('tanggalCheckout').value;
     const jumlahTamu = document.getElementById('jumlahTamu').value;
-    const jenisTransportasi = document.querySelector('input[name="jenisTransportasi"]:checked').value;
-    const jenisPenginapan = document.querySelector('input[name="jenisPenginapan"]:checked').value;
-    const metodePembayaran = document.querySelector('input[name="metodePembayaran"]:checked').value;
+    const jenisTransportasi = document.getElementById('jenisTransportasi').value;
+    const jenisPenginapan = document.getElementById('jenisPenginapan').value;
+    const metodePembayaran = document.getElementById('metodePembayaran').value;
 
     const bookingData = {
       tanggalCheckin,
@@ -58,9 +71,8 @@ document.addEventListener('DOMContentLoaded', () => {
       jenisTransportasi,
       jenisPenginapan,
       metodePembayaran,
+      destinasiId: selectedDestinasi.id,
     };
-
-    console.log('Booking Data:', bookingData); // Debugging log
 
     try {
       const response = await fetch('http://localhost:3000/booking', {
@@ -71,14 +83,11 @@ document.addEventListener('DOMContentLoaded', () => {
         body: JSON.stringify(bookingData),
       });
 
-      console.log('Response:', response); // Debugging log
-
       if (!response.ok) {
         throw new Error('Failed to book');
       }
 
       const result = await response.json();
-      console.log('Result:', result); // Debugging log
       alert('Booking berhasil');
       window.location.href = 'index.html';
     } catch (error) {
