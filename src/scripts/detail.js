@@ -1,8 +1,6 @@
-/* eslint-disable no-shadow */
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-alert */
 /* eslint-disable func-names */
 /* eslint-disable eqeqeq */
+/* eslint-disable no-shadow */
 import '../styles/detail.css';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -20,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   const popup = document.getElementById('bookingPopup');
-  const btn = document.getElementById('openBookingForm');
+  const btn = document.querySelector('.booking button');
   const span = document.getElementsByClassName('close')[0];
 
   btn.onclick = function () {
@@ -37,42 +35,24 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  const selectButtons = document.querySelectorAll('.select-button');
-  selectButtons.forEach((button) => {
-    button.addEventListener('click', function () {
-      const type = this.getAttribute('data-type');
-      const value = this.getAttribute('data-value');
-
-      document.getElementById(type).value = value;
-
-      selectButtons.forEach((btn) => {
-        if (btn.getAttribute('data-type') === type) {
-          btn.classList.remove('selected');
-        }
-      });
-      this.classList.add('selected');
-    });
-  });
-
   document.getElementById('bookingForm').addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    const tanggalCheckin = document.getElementById('tanggalCheckin').value;
-    const tanggalCheckout = document.getElementById('tanggalCheckout').value;
-    const jumlahTamu = document.getElementById('jumlahTamu').value;
-    const jenisTransportasi = document.getElementById('jenisTransportasi').value;
-    const jenisPenginapan = document.getElementById('jenisPenginapan').value;
-    const metodePembayaran = document.getElementById('metodePembayaran').value;
+    const emailUser = localStorage.getItem('userEmail'); // Asumsi email disimpan di local storage dengan key 'userEmail'
+    const form = e.target;
 
-    const bookingData = {
-      tanggalCheckin,
-      tanggalCheckout,
-      jumlahTamu,
-      jenisTransportasi,
-      jenisPenginapan,
-      metodePembayaran,
+    const data = {
+      tanggalCheckin: form.tanggalCheckin.value,
+      tanggalCheckout: form.tanggalCheckout.value,
+      jumlahTamu: form.jumlahTamu.value,
+      jenisTransportasi: form.jenisTransportasi.value,
+      jenisPenginapan: form.jenisPenginapan.value,
+      metodePembayaran: form.metodePembayaran.value,
       destinasiId: selectedDestinasi.id,
+      emailUser, // Kirimkan email user
     };
+
+    console.log('Booking Data:', data);
 
     try {
       const response = await fetch('http://localhost:3000/booking', {
@@ -80,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(bookingData),
+        body: JSON.stringify(data),
       });
 
       if (!response.ok) {
@@ -88,11 +68,28 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       const result = await response.json();
-      alert('Booking berhasil');
+      alert(result.message);
       window.location.href = 'index.html';
     } catch (error) {
       console.error('Error:', error);
-      alert(`Booking gagal: ${error.message}`);
+      alert('Gagal melakukan booking');
     }
+  });
+
+  const selectButtons = document.querySelectorAll('.select-button');
+  selectButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      const { type } = button.dataset;
+      const { value } = button.dataset;
+
+      // Reset selected class for the same type
+      document.querySelectorAll(`.select-button[data-type="${type}"]`).forEach((btn) => btn.classList.remove('selected'));
+
+      // Set selected class for clicked button
+      button.classList.add('selected');
+
+      // Update hidden input value
+      document.getElementById(type).value = value;
+    });
   });
 });
