@@ -15,20 +15,20 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   const loginButton = document.querySelector('.btn-orange');
   const registerButton = document.querySelector('.btn-blue');
-  const userEmailElement = document.getElementById('userEmail');
+  const userNameElement = document.getElementById('userName'); // Ubah dari userEmail ke userName
   const userProfileSection = document.getElementById('userProfile');
   const profilePopup = document.getElementById('profilePopup');
   const logoutButton = document.getElementById('logoutButton');
   const profileButton = document.getElementById('profileButton');
 
   const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
-  const userEmail = localStorage.getItem('userEmail');
+  const userName = localStorage.getItem('userName'); // Ambil nama pengguna dari local storage
 
   if (isLoggedIn) {
     loginButton.style.display = 'none';
     registerButton.style.display = 'none';
     userProfileSection.style.display = 'flex';
-    userEmailElement.textContent = userEmail;
+    userNameElement.textContent = userName; // Tampilkan nama pengguna
   } else {
     loginButton.style.display = 'block';
     registerButton.style.display = 'block';
@@ -48,6 +48,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   logoutButton.addEventListener('click', () => {
     localStorage.removeItem('isLoggedIn');
     localStorage.removeItem('userEmail');
+    localStorage.removeItem('userName'); // Hapus nama pengguna dari localStorage
     alert('Logged out successfully');
     window.location.href = 'index.html';
   });

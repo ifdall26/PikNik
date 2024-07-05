@@ -569,6 +569,7 @@ footer {
   font-weight: bold;
 }
 
-span#userEmail {
-  color: #000;
+span#userName {
+  color: darkorange;
+  padding-left: 15px;
 }

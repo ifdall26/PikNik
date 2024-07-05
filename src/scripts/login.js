@@ -23,8 +23,11 @@ document.getElementById('loginForm').addEventListener('submit', async (e) => {
     const data = await response.json();
     alert(data.message);
 
+    const { user } = data;
+
     localStorage.setItem('isLoggedIn', 'true');
-    localStorage.setItem('userEmail', email);
+    localStorage.setItem('userEmail', user.email);
+    localStorage.setItem('userName', user.name);
 
     window.location.href = 'index.html';
   } catch (error) {
