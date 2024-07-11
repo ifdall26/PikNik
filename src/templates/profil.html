@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PikNik Profile</title>
+    <link rel="stylesheet" href="../styles/profile.css">
 </head>
 <body>
     <header>
@@ -25,7 +26,7 @@
                 <li id="pesananSayaTab">Pesanan Saya</li>
             </ul>
             <div class="account-actions">
-                <button>Logout</button>
+                <button id="logoutButton">Logout</button>
             </div>
         </aside>
         <main>
@@ -50,15 +51,7 @@
             <div id="pesananSayaContent" class="content">
                 <div class="pesanan-saya">
                     <h3>Daftar Pemesanan</h3>
-                    <div class="order-item">
-                        <img src="images/dest_1.png" alt="Raja Ampat">
-                        <div class="order-details">
-                            <h4>Nama Destinasi</h4>
-                            <p><strong>Tanggal Check-In:</strong> 08-Juni-2024</p>
-                            <p><strong>Tanggal Check-Out:</strong> 05-Juni-2024</p>
-                            <p><strong>Nomor Perjalanan:</strong> 001-RAJA-AMPAT</p>
-                        </div>
-                    </div>
+                    <div id="ordersContainer"></div> <!-- Tambahkan div ini untuk menampilkan pesanan -->
                 </div>
             </div>
         </main>

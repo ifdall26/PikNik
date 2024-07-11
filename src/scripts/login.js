@@ -25,11 +25,13 @@ document.getElementById('loginForm').addEventListener('submit', async (e) => {
 
     const { user } = data;
 
+    // Simpan data pengguna ke localStorage
     localStorage.setItem('isLoggedIn', 'true');
+    localStorage.setItem('userId', user.id); // Simpan userId
     localStorage.setItem('userEmail', user.email);
     localStorage.setItem('userName', user.name);
 
-    window.location.href = 'index.html';
+    window.location.href = 'index.html'; // Redirect ke halaman setelah login berhasil
   } catch (error) {
     console.error('Login gagal:', error.message);
     alert('Login gagal. Silakan coba lagi.');
