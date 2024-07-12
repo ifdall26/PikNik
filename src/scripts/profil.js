@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const userName = localStorage.getItem('userName');
   const userEmail = localStorage.getItem('userEmail');
-  const userId = localStorage.getItem('userId'); // Tambahkan pengambilan userId dari localStorage
+  const userId = localStorage.getItem('userId'); // Ambil userId dari localStorage
 
   if (userName) {
     usernameDisplay.textContent = userName;
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   async function fetchBookings(userId) {
     try {
-      const response = await fetch(`http://localhost:3000/bookings/${userId}`);
+      const response = await fetch(`http://localhost:3000/booking/${userId}`);
       if (!response.ok) {
         throw new Error('Failed to fetch bookings');
       }
