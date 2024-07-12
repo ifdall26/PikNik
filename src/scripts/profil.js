@@ -72,8 +72,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const bookingDetails = document.createElement('div');
       bookingDetails.classList.add('order-details');
 
-      const destinationName = document.createElement('h4');
-      destinationName.textContent = booking.destinationName;
+      const destinationId = document.createElement('h4');
+      destinationId.textContent = booking.id;
 
       const checkIn = document.createElement('p');
       checkIn.innerHTML = `<strong>Tanggal Check-In:</strong> ${new Date(booking.tanggalCheckin).toLocaleDateString('id-ID')}`;
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const checkOut = document.createElement('p');
       checkOut.innerHTML = `<strong>Tanggal Check-Out:</strong> ${new Date(booking.tanggalCheckout).toLocaleDateString('id-ID')}`;
 
-      bookingDetails.appendChild(destinationName);
+      bookingDetails.appendChild(destinationId);
       bookingDetails.appendChild(checkIn);
       bookingDetails.appendChild(checkOut);
 
