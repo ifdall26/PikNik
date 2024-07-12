@@ -66,8 +66,8 @@ document.addEventListener('DOMContentLoaded', () => {
       bookingItem.classList.add('order-item');
 
       const img = document.createElement('img');
-      img.src = `images/${booking.destinationImage}`; // Pastikan gambar sesuai dengan data booking
-      img.alt = booking.destinationName;
+      img.src = booking.gambar;
+      img.alt = booking.Destinasi.nama_destinasi || 'Destination Image'; // Pastikan menggunakan casing yang sesuai
 
       const bookingDetails = document.createElement('div');
       bookingDetails.classList.add('order-details');
