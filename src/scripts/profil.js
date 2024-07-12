@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const img = document.createElement('img');
       img.src = booking.gambar;
-      img.alt = booking.Destinasi.nama_destinasi || 'Destination Image'; // Pastikan menggunakan casing yang sesuai
+      img.alt = 'Destination Image'; // Pastikan menggunakan casing yang sesuai
 
       const bookingDetails = document.createElement('div');
       bookingDetails.classList.add('order-details');
