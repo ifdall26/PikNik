@@ -1,3 +1,6 @@
+/* eslint-disable no-shadow */
+/* eslint-disable no-plusplus */
+/* eslint-disable no-loop-func */
 /* eslint-disable max-len */
 /* eslint-disable no-use-before-define */
 /* eslint-disable no-undef */
@@ -65,10 +68,14 @@ document.addEventListener('DOMContentLoaded', async () => {
     window.location.href = 'profil.html';
   });
 
+  let currentPage = 1;
+  const perPage = 6; // Jumlah destinasi per halaman
+  let destinasiData = []; // Simpan data destinasi dari API
+
   // Fetch and display destinasi data from API
   try {
-    const destinasiData = await fetchDestinasiData();
-    displayDestinasi(destinasiData);
+    destinasiData = await fetchDestinasiData();
+    displayDestinasiPerPage(destinasiData, currentPage, perPage);
   } catch (error) {
     console.error('Error fetching destinasi data:', error);
     // Handle error fetching data
@@ -83,102 +90,158 @@ document.addEventListener('DOMContentLoaded', async () => {
       || destinasi.deskripsi.toLowerCase().includes(searchTerm));
     displayFilteredDestinasi(filteredData);
   });
-});
 
-async function fetchDestinasiData() {
-  try {
-    const response = await fetch('http://localhost:3000/destinasi'); // Ganti URL sesuai dengan endpoint API Anda
-    if (!response.ok) {
-      throw new Error('Failed to fetch data');
+  // Function to fetch destinasi data
+  async function fetchDestinasiData() {
+    try {
+      const response = await fetch('http://localhost:3000/destinasi');
+      if (!response.ok) {
+        throw new Error('Failed to fetch data');
+      }
+      const data = await response.json();
+      return data;
+    } catch (error) {
+      console.error('Error fetching destinasi data:', error);
+      throw error;
     }
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    console.error('Error fetching destinasi data:', error);
-    throw error; // Rethrow error untuk menangkapnya di event handler di DOMContentLoaded
   }
-}
 
-function displayDestinasi(data) {
-  const infoDestinasiContainer = document.querySelector('.info-destinasi .container');
-  const populerDestinasiContainer = document.querySelector('.populer-destinasi .container');
+  // Function to display destinasi per page
+  function displayDestinasiPerPage(data, page, perPage) {
+    const startIndex = (page - 1) * perPage;
+    const endIndex = startIndex + perPage;
+    const paginatedData = data.slice(startIndex, endIndex);
+    displayDestinasi(paginatedData);
+    renderPaginationButtons(data.length);
+  }
 
-  // Sort data by rating in descending order
-  const sortedData = data.sort((a, b) => b.rating - a.rating);
+  // Function to display destinasi cards
+  function displayDestinasi(data) {
+    const infoDestinasiContainer = document.querySelector('.info-destinasi .container');
+    const populerDestinasiContainer = document.querySelector('.populer-destinasi .container');
 
-  infoDestinasiContainer.innerHTML = '';
-  populerDestinasiContainer.innerHTML = '';
+    // Sort data by rating in descending order
+    const sortedData = data.sort((a, b) => b.rating - a.rating);
 
-  // Display all destinasi
-  sortedData.forEach((destinasi) => {
-    const cardInfo = `
-      <div class="card card-info">
-        <img src="${destinasi.gambar}" alt="${destinasi.nama_destinasi}">
-        <div class="card-content">
-          <h3><a href="#" class="detail-link" data-destinasi='${JSON.stringify(destinasi)}'>${destinasi.nama_destinasi}</a></h3>
-          <p>${destinasi.deskripsi}</p>
+    infoDestinasiContainer.innerHTML = '';
+    populerDestinasiContainer.innerHTML = '';
+
+    // Display all destinasi
+    sortedData.forEach((destinasi) => {
+      const cardInfo = `
+        <div class="card card-info">
+          <img src="${destinasi.gambar}" alt="${destinasi.nama_destinasi}">
+          <div class="card-content">
+            <h3><a href="#" class="detail-link" data-destinasi='${JSON.stringify(destinasi)}'>${destinasi.nama_destinasi}</a></h3>
+            <p>${destinasi.deskripsi}</p>
+          </div>
         </div>
-      </div>
-    `;
-    infoDestinasiContainer.innerHTML += cardInfo;
-  });
-
-  // Display top 3 rated destinasi as popular
-  sortedData.slice(0, 3).forEach((destinasi) => {
-    const cardPopuler = `
-      <div class="card model-2">
-        <div class="loc">
-          <div class="location">Kota: ${destinasi.lokasi}</div>
-          <h3>${destinasi.nama_destinasi}</h3>
-        </div>
-        <img src="${destinasi.gambar}" alt="${destinasi.nama_destinasi}">
-        <div class="card-content">
-          <div class="rating">Rating: <span>${destinasi.rating}</span></div>
-          <p>${destinasi.deskripsi}</p>
-        </div>
-      </div>
-    `;
-    populerDestinasiContainer.innerHTML += cardPopuler;
-  });
-
-  // Add event listeners to detail links
-  addDetailLinksEventListeners();
-}
-
-function displayFilteredDestinasi(data) {
-  const infoDestinasiContainer = document.querySelector('.info-destinasi .container');
-
-  infoDestinasiContainer.innerHTML = '';
-
-  // Display filtered destinasi
-  data.forEach((destinasi) => {
-    const cardInfo = `
-      <div class="card card-info">
-        <img src="${destinasi.gambar}" alt="${destinasi.nama_destinasi}">
-        <div class="card-content">
-          <h3><a href="#" class="detail-link" data-destinasi='${JSON.stringify(destinasi)}'>${destinasi.nama_destinasi}</a></h3>
-          <p>${destinasi.deskripsi}</p>
-        </div>
-      </div>
-    `;
-    infoDestinasiContainer.innerHTML += cardInfo;
-  });
-
-  // Add event listeners to detail links
-  addDetailLinksEventListeners();
-}
-
-function addDetailLinksEventListeners() {
-  const detailLinks = document.querySelectorAll('.detail-link');
-  detailLinks.forEach((link) => {
-    link.addEventListener('click', (event) => {
-      event.preventDefault();
-      const destinasi = JSON.parse(event.target.getAttribute('data-destinasi'));
-      localStorage.setItem('selectedDestinasi', JSON.stringify(destinasi));
-      window.location.href = 'detail.html';
+      `;
+      infoDestinasiContainer.innerHTML += cardInfo;
     });
-  });
-}
+
+    // Display top 3 rated destinasi as popular
+    sortedData.slice(0, 3).forEach((destinasi) => {
+      const cardPopuler = `
+        <div class="card model-2">
+          <div class="loc">
+            <div class="location">Kota: ${destinasi.lokasi}</div>
+            <h3>${destinasi.nama_destinasi}</h3>
+          </div>
+          <img src="${destinasi.gambar}" alt="${destinasi.nama_destinasi}">
+          <div class="card-content">
+            <div class="rating">Rating: <span>${destinasi.rating}</span></div>
+            <p>${destinasi.deskripsi}</p>
+          </div>
+        </div>
+      `;
+      populerDestinasiContainer.innerHTML += cardPopuler;
+    });
+
+    // Add event listeners to detail links
+    addDetailLinksEventListeners();
+  }
+
+  // Function to display filtered destinasi
+  function displayFilteredDestinasi(data) {
+    const infoDestinasiContainer = document.querySelector('.info-destinasi .container');
+
+    infoDestinasiContainer.innerHTML = '';
+
+    // Display filtered destinasi
+    data.forEach((destinasi) => {
+      const cardInfo = `
+        <div class="card card-info">
+          <img src="${destinasi.gambar}" alt="${destinasi.nama_destinasi}">
+          <div class="card-content">
+            <h3><a href="#" class="detail-link" data-destinasi='${JSON.stringify(destinasi)}'>${destinasi.nama_destinasi}</a></h3>
+            <p>${destinasi.deskripsi}</p>
+          </div>
+        </div>
+      `;
+      infoDestinasiContainer.innerHTML += cardInfo;
+    });
+
+    // Add event listeners to detail links
+    addDetailLinksEventListeners();
+  }
+
+  // Function to render pagination buttons
+  function renderPaginationButtons(totalItems) {
+    const paginationContainer = document.getElementById('paginationContainer');
+    paginationContainer.innerHTML = '';
+
+    const totalPages = Math.ceil(totalItems / perPage);
+
+    // Previous button
+    const prevButton = document.createElement('button');
+    prevButton.textContent = 'Prev';
+    prevButton.disabled = currentPage === 1;
+    prevButton.addEventListener('click', () => {
+      if (currentPage > 1) {
+        currentPage--;
+        displayDestinasiPerPage(destinasiData, currentPage, perPage);
+      }
+    });
+    paginationContainer.appendChild(prevButton);
+
+    // Numbered buttons
+    for (let i = 1; i <= totalPages; i++) {
+      const button = document.createElement('button');
+      button.textContent = i;
+      button.addEventListener('click', () => {
+        currentPage = i;
+        displayDestinasiPerPage(destinasiData, currentPage, perPage);
+      });
+      paginationContainer.appendChild(button);
+    }
+
+    // Next button
+    const nextButton = document.createElement('button');
+    nextButton.textContent = 'Next';
+    nextButton.disabled = currentPage === totalPages;
+    nextButton.addEventListener('click', () => {
+      if (currentPage < totalPages) {
+        currentPage++;
+        displayDestinasiPerPage(destinasiData, currentPage, perPage);
+      }
+    });
+    paginationContainer.appendChild(nextButton);
+  }
+
+  // Function to add event listeners to detail links
+  function addDetailLinksEventListeners() {
+    const detailLinks = document.querySelectorAll('.detail-link');
+    detailLinks.forEach((link) => {
+      link.addEventListener('click', (event) => {
+        event.preventDefault();
+        const destinasi = JSON.parse(event.target.getAttribute('data-destinasi'));
+        localStorage.setItem('selectedDestinasi', JSON.stringify(destinasi));
+        window.location.href = 'detail.html';
+      });
+    });
+  }
+});
 
 function sendEmail() {
   const templateParams = {
