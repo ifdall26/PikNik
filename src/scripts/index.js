@@ -10,6 +10,10 @@ import '../styles/responsive.css';
 
 const API_URL = import.meta.env.VITE_API_URL;
 
+if (!API_URL) {
+  throw new Error('VITE_API_URL is not defined');
+}
+
 document.addEventListener('DOMContentLoaded', async () => {
   const hamburgerButton = document.getElementById('hamburgerButton');
   const navMenu = document.getElementById('navMenu');
