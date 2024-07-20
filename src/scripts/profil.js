@@ -3,8 +3,6 @@
 /* eslint-disable no-shadow */
 import '../styles/profile.css';
 
-const API_URL = import.meta.env.VITE_API_URL;
-
 document.addEventListener('DOMContentLoaded', () => {
   const dataPribadiTab = document.getElementById('dataPribadiTab');
   const pesananSayaTab = document.getElementById('pesananSayaTab');
@@ -50,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   async function fetchBookings(userId) {
     try {
-      const response = await fetch(`${API_URL}/booking/${userId}`);
+      const response = await fetch(`https://pariwisata-api-production-ffda.up.railway.app/booking/${userId}`);
       if (!response.ok) {
         throw new Error('Failed to fetch bookings');
       }

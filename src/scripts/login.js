@@ -1,7 +1,5 @@
 import '../styles/login.css';
 
-const API_URL = import.meta.env.VITE_API_URL;
-
 document.getElementById('loginForm').addEventListener('submit', async (e) => {
   e.preventDefault();
 
@@ -9,7 +7,7 @@ document.getElementById('loginForm').addEventListener('submit', async (e) => {
   const password = document.getElementById('password').value;
 
   try {
-    const response = await fetch(`${API_URL}/auth/login`, {
+    const response = await fetch('https://pariwisata-api-production-ffda.up.railway.app/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
