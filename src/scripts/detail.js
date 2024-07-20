@@ -3,6 +3,8 @@
 /* eslint-disable no-shadow */
 import '../styles/detail.css';
 
+const API_URL = import.meta.env.VITE_API_URL;
+
 document.addEventListener('DOMContentLoaded', () => {
   const selectedDestinasi = JSON.parse(localStorage.getItem('selectedDestinasi'));
 
@@ -55,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('Booking Data:', data);
 
     try {
-      const response = await fetch('http://localhost:3000/booking', {
+      const response = await fetch(`${API_URL}/booking`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -8,6 +8,8 @@ import 'regenerator-runtime';
 import '../styles/main.css';
 import '../styles/responsive.css';
 
+const API_URL = import.meta.env.VITE_API_URL;
+
 document.addEventListener('DOMContentLoaded', async () => {
   const hamburgerButton = document.getElementById('hamburgerButton');
   const navMenu = document.getElementById('navMenu');
@@ -94,7 +96,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   // Function to fetch destinasi data
   async function fetchDestinasiData() {
     try {
-      const response = await fetch('http://localhost:3000/destinasi');
+      const response = await fetch(`${API_URL}/destinasi`);
       if (!response.ok) {
         throw new Error('Failed to fetch data');
       }
